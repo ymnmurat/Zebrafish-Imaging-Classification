@@ -16,7 +16,7 @@ Clone the repo into your local directory, then navigate into it.
 
 ```bash
 git clone https://github.com/dwu1011/Zebrafish-Imaging-Classification.git
-cd your-repo
+cd Zebrafish-Imaging-Classification
 ```
 
 ### 2. (Optional) Create a virtual environment
