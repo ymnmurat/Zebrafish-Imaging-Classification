@@ -15,7 +15,7 @@ The model resizes all images to 15×15 pixels and flattens them into feature vec
 Clone the repo into your local directory, then navigate into it.
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/dwu1011/Zebrafish-Imaging-Classification.git
 cd your-repo
 ```
 
