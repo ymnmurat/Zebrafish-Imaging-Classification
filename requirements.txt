@@ -1,3 +1,7 @@
 numpy
 scikit-image
 scikit-learn
+torch
+torchvision
+seaborn
+matplotlib

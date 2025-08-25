@@ -1,10 +1,12 @@
-# Zebrafish Image Classifier (SVM)
+# Zebrafish Image Classifier (SVM + CNN)
 
 ## Description
 
-This project is a simple image classification pipeline for thrombosis research, built using scikit-learn. It uses a Support Vector Machine (SVM) model.
+This project is a simple image classification pipeline for thrombosis research, built using scikit-learn. It uses a Support Vector Machine (SVM) model and Convolutional Neural Network (CNN) model. 
 
 The model resizes all images to 15×15 pixels and flattens them into feature vectors. The dataset is then split into training and testing sets, after which an SVM classifier is trained. Model performance is evaluated using accuracy, sensitivity, specificity, balanced accuracy, and ROC AUC.
+
+This model resizes all images to 1000x1000 pixel image which then trains a CNN after being split into training and testing datasets. This model is then tested on accuracy, sensitivity, specificity, balanced accuracy, and ROC AUC.
 
 **Purpose:** The model is intended to examine clotting pattern differences between different thrombosis models. It distinguishes between an acquired model exhibiting speckled patterns of thrombus distribution, versus a genetic model exhibiting sprouting patterns with denser fluorescence signals.
 
@@ -67,6 +69,12 @@ Other subfolders in the full dataset were not used in training and testing this 
 
 To run the pipeline, use the following command:
 
+#### SVM Model
 ```bash
-python svm_model.py
+python svm.py
+```
+
+#### CNN Model
+```bash
+python cnn.py
 ```
