@@ -17,7 +17,7 @@ This model resizes all images to 1000x1000 pixel image which then trains a CNN a
 Clone the repo into your local directory, then navigate into it.
 
 ```bash
-git clone https://github.com/dwu1011/Zebrafish-Imaging-Classification.git
+git clone https://github.com/ymnmurat/Zebrafish-Imaging-Classification.git
 cd Zebrafish-Imaging-Classification
 ```
 
