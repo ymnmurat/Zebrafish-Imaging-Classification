@@ -8,7 +8,7 @@ The model resizes all images to 15×15 pixels and flattens them into feature vec
 
 This model resizes all images to 1000x1000 pixel image which then trains a CNN after being split into training and testing datasets. This model is then tested on accuracy, sensitivity, specificity, balanced accuracy, and ROC AUC.
 
-**Purpose:** The model is intended to examine clotting pattern differences between different thrombosis models. It distinguishes between an acquired model exhibiting speckled patterns of thrombus distribution, versus a genetic model exhibiting sprouting patterns with denser fluorescence signals.
+**Purpose:** The model is intended to examine clotting pattern differences between different zebrafish thrombosis models at 5 days-post-fertilization (dpf). It distinguishes between an acquired (estrogen-induced) model exhibiting speckled patterns of thrombus distribution, versus a genetic (spontaneous; protein C deficient) model exhibiting sprouting patterns with denser fluorescence signals.
 
 ## How to setup and run
 
