@@ -57,13 +57,11 @@ images/<br>
 │ ├── img3.png<br>
 │ ├── img4.png
 
-**Note:** The images included in this repository are a small subset of data. The full dataset can be downloaded here: [https://drive.google.com/drive/folders/1xrwQSTaHyiDmvbMnMK4_lE2wCr7X80gU?usp=sharing]
+**Note:** The images included in this repository are a small subset of data. The full dataset is available upon request.
 
 The labeling of the subfolders in `/images` corresponds to the 2 groups of experimental images used for the SVM and CNN models, and are included as subfolders in the full dataset:<br>
 class_0: '20220626_ProC-MePS-12'<br>
 class_1: '20220704_FGBA3-MCE-MEPS-VALID-A-2-6'
-
-Other subfolders in the full dataset were not used in training and testing this model, but are included in the link for your usage.
 
 ### 5. Run model
 
