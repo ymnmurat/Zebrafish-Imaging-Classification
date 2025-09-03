@@ -6,7 +6,7 @@ This project is a simple image classification pipeline for thrombosis research, 
 
 The model resizes all images to 15×15 pixels and flattens them into feature vectors. The dataset is then split into training and testing sets, after which an SVM classifier is trained. Model performance is evaluated using accuracy, sensitivity, specificity, balanced accuracy, and ROC AUC.
 
-This model resizes all images to 1000x1000 pixel image which then trains a CNN after being split into training and testing datasets. This model is then tested on accuracy, sensitivity, specificity, balanced accuracy, and ROC AUC.
+This model resizes all images to 224x224 pixel image which then trains a CNN after being split into training and testing datasets. This model is then tested on accuracy, sensitivity, specificity, balanced accuracy, and ROC AUC.
 
 **Purpose:** The model is intended to examine clotting pattern differences between different zebrafish thrombosis models at 5 days-post-fertilization (dpf). It distinguishes between an acquired (estrogen-induced) model exhibiting speckled patterns of thrombus distribution, versus a genetic (spontaneous; protein C deficient) model exhibiting sprouting patterns with denser fluorescence signals.
 
