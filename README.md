@@ -76,3 +76,21 @@ python svm.py
 ```bash
 python cnn.py
 ```
+
+## Native TIFF CNN (experiment holdout)
+
+The revised pipeline is in `cnn_native_tiff.py`. The original CNN and SVM commands above reproduce the earlier image-level split and demo. The native-TIFF analysis uses the full fluorescence TIFFs, retains dim images, and holds out entire experiments. The default full-frame model is the primary Figure 2B model. Use `--view crop` to evaluate the same CNN on a 960 × 384 µm tail window estimated from local texture.
+
+Install the analysis dependencies.
+
+```bash
+python -m pip install numpy Pillow scipy scikit-learn torch
+```
+
+Use an ordered JSON array of image records from the study data. Each record needs `member` (a TIFF path relative to `--root`, or an entry name in `archive`), `experiment`, `split` (`train`, `historical_test`, or `recent`), `reference_class` (0 for ProC, 1 for FGBA3, or `null` for recent), and `um_per_pixel` (native X pixel size). For ZIP inputs set `archive` to the ZIP path relative to `--root`. Set `mestranol_uM` on recent ProC rows. Mark excluded rows with `split: "excluded"` or leave them out of the manifest. Records marked `M20_challenge` or `duplicate_of` are skipped. The script checks that retained experiments and image content do not overlap across splits.
+
+```bash
+python cnn_native_tiff.py --manifest study_manifest.json --root /path/to/study-data --output run_full --view full
+```
+
+The Figure 2B study manifest contains 1,276 training and 781 historical test images. The 665 recent ProC images are scored separately. A reference label is supplied only for the untreated recent controls. The script writes a PyTorch checkpoint, per-image predictions, historical metrics, and the prepared image cache to the specified new output directory. The ROC AUC uses continuous Class 1 scores, and the binary-call AUC is reported separately. For the study acquisitions, a native pitch below 0.9 µm/pixel identifies the 20× subset. The pilot used CPU PyTorch 2.6.0, NumPy 2.2.2, Pillow 11.1.0, SciPy 1.15.1, and scikit-learn 1.6.1. Use the full study data and original manifest order to reproduce the reported numbers.
